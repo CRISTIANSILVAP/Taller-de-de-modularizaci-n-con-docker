@@ -119,9 +119,31 @@ curl "http://localhost:8080/greeting?name=Cristian"
 
 ## Endpoints disponibles
 
-- `GET /` retorna `"<h1>Greetings from MicroSpring!</h1>"`
+- `GET /` retorna `"<h1>Greetings from MicroSpring!</h1>"` o sirve `public/index.html`
 - `GET /greeting?name=TuNombre` retorna `"<h1>Hola, TuNombre!</h1>"`
-- Si no se envía `name`, el valor por defecto es `World`
+- `GET /page.html` sirve `public/page.html`
+- Cualquier archivo en la carpeta `public/` es servido automáticamente
+
+## Soporte de archivos estáticos
+
+El servidor soporta la entrega de archivos estáticos con los MIME types correctos:
+
+- **HTML** (.html): `text/html`
+- **Imágenes PNG** (.png): `image/png`
+- **Imágenes JPEG** (.jpg, .jpeg): `image/jpeg`
+- **Imágenes GIF** (.gif): `image/gif`
+- **CSS** (.css): `text/css`
+- **JavaScript** (.js): `application/javascript`
+- **JSON** (.json): `application/json`
+- **SVG** (.svg): `image/svg+xml`
+- **PDF** (.pdf): `application/pdf`
+
+Para servir archivos, colócalos en la carpeta `public/` y accede a ellos por su nombre:
+
+```bash
+curl http://localhost:8080/page.html
+curl http://localhost:8080/image.png
+```
 
 ## Concurrencia y apagado elegante
 
@@ -221,6 +243,14 @@ Las siguientes capturas muestran las pruebas de concurrencia realizadas sobre el
 La siguiente captura muestra la evidencia del apagado elegante del servidor:
 
 ![image12](images/image12.png)
+
+### Pruebas de servicio de archivos estáticos
+
+Las siguientes capturas muestran el funcionamiento del servidor sirviendo archivos HTML e imágenes PNG:
+
+![imagetestpng](images/imagetestpng.png)
+
+![imageteststatic](images/imageteststatic.png)
 
 ### Video de demostración
 

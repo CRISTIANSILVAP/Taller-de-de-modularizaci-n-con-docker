@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Adicional</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #667eea; }
+        a { color: #667eea; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Página Estática HTML</h1>
+        <p>Este archivo HTML es servido directamente por el servidor desde la carpeta <code>public/</code>.</p>
+        
+        <h2>Soporte de Archivos Estáticos</h2>
+        <p>El servidor ahora puede entregar:</p>
+        <ul>
+            <li>Archivos HTML (.html)</li>
+            <li>Imágenes PNG (.png)</li>
+            <li>Imágenes JPEG (.jpg, .jpeg)</li>
+            <li>Hojas de estilo CSS (.css)</li>
+            <li>Otros archivos estáticos</li>
+        </ul>
+        
+        <h2>Cómo usar</h2>
+        <ol>
+            <li>Coloca archivos en la carpeta <code>public/</code></li>
+            <li>Accede a ellos en tu navegador: <code>http://localhost:8080/archivo.html</code></li>
+            <li>El servidor detecta automáticamente el tipo MIME</li>
+        </ol>
+        
+        <p><a href="/">Volver al inicio</a></p>
+    </div>
+</body>
+</html>

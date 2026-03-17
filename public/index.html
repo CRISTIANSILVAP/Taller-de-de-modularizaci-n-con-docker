@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroFramework Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .endpoints {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: left;
+            margin: 30px 0;
+        }
+        
+        .endpoints h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .endpoints a {
+            display: block;
+            padding: 10px;
+            margin: 8px 0;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .endpoints a:hover {
+            background: #764ba2;
+        }
+        
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            text-align: left;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido al MicroFramework</h1>
+        <p>Este es un servidor HTTP ligero implementado en Java sin Spring, con soporte para archivos estáticos (HTML, PNG, etc) y endpoints dinámicos.</p>
+        
+        <div class="endpoints">
+            <h3>Endpoints disponibles:</h3>
+            <a href="/">Home (índice)</a>
+            <a href="/greeting?name=Cristian">Saludo personalizado</a>
+            <a href="/page.html">Página HTML adicional</a>
+        </div>
+        
+        <h3>Características</h3>
+        <p>✓ Anotaciones @RestController y @GetMapping</p>
+        <p>✓ Procesamiento de parámetros @RequestParam</p>
+        <p>✓ Servicio de archivos estáticos (HTML, PNG, CSS, etc)</p>
+        <p>✓ Concurrencia con pool de hilos</p>
+        <p>✓ Apagado elegante</p>
+        
+        <div class="code">
+            curl http://localhost:8080/<br>
+            curl http://localhost:8080/greeting?name=Usuario<br>
+            curl http://localhost:8080/page.html
+        </div>
+    </div>
+</body>
+</html>

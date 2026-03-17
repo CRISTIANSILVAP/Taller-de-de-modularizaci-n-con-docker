@@ -256,7 +256,4 @@ Las siguientes capturas muestran el funcionamiento del servidor sirviendo archiv
 
 El siguiente video muestra el despliegue completo del microframework en AWS EC2 con las pruebas de funcionalidad, concurrencia y apagado elegante:
 
-<video width="640" height="480" controls>
-  <source src="images/videotdsemcspring.mp4" type="video/mp4">
-  Tu navegador no soporta video.
-</video>
+[![Ver video](https://img.youtube.com/vi/ZUp9dQSvQLE/0.jpg)](https://youtu.be/ZUp9dQSvQLE)
